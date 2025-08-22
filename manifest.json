@@ -1,0 +1,26 @@
+{
+"manifest_version": 3,
+"name": "Tábla",
+"description": "e-Kréta bővítmény.",
+"version": "1.3.0",
+"icons": {
+"16": "icons/icon16.png",
+"48": "icons/icon48.png",
+"128": "icons/icon128.png"
+},
+"content_scripts": [
+{
+"matches": [
+"*://*.e-kreta.hu/*",
+"*://e-kreta.hu/*"
+],
+"js": ["content.js"],
+"css": ["styles.css"],
+"run_at": "document_end"
+}
+],
+"options_page": "options.html",
+"action": {
+"default_title": "Tábla"
+}
+}
