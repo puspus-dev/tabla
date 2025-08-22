@@ -14,7 +14,7 @@
 "*://*.e-kreta.hu/*",
 "*://e-kreta.hu/*",
 "*://idp.e-kreta.hu/*",
-"*://*intezmenykereso.e-kreta.hu/*"
+"*://intezmenykereso.e-kreta.hu/*"
 ],
 "js": ["content.js"],
 "css": ["styles.css"],
