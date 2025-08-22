@@ -1,4 +1,20 @@
 (function() {
+if (localStorage.getItem(KEY) === '1') document.documentElement.classList.add('kb-dark');
+const prefs = JSON.parse(localStorage.getItem(PREFS) || '{}');
+applyPrefs(prefs);
+
+
+const btn = document.createElement('button');
+btn.id = 'kb-toggle';
+btn.textContent = document.documentElement.classList.contains('kb-dark') ? 'Világos mód' : 'Sötét mód';
+btn.addEventListener('click', () => {
+const dark = document.documentElement.classList.toggle('kb-dark');
+localStorage.setItem(KEY, dark ? '1' : '0');
+btn.textContent = dark ? 'Világos mód' : 'Sötét mód';
+});
+
+
+const menuBtn = document.createElement('button');
 menuBtn.id = 'kb-theme-menu';
 menuBtn.textContent = '🎨 Téma';
 
@@ -27,11 +43,8 @@ const saveBtn = document.createElement('button');
 saveBtn.textContent = '+ Mentés';
 saveBtn.addEventListener('click', () => {
 const name = prompt('Adj nevet a saját témádnak:');
-if (name) {
-const currentPrefs = JSON.parse(localStorage.getItem(PREFS) || '{}');
-saveCustomTheme(name, currentPrefs);
+if (name) saveCustomTheme(name);
 rebuildSelector();
-}
 });
 selector.appendChild(saveBtn);
 }
@@ -50,18 +63,11 @@ document.body.appendChild(btn);
 document.body.appendChild(menuBtn);
 document.body.appendChild(selector);
 });
+
+
 if (document.body) {
 document.body.appendChild(btn);
 document.body.appendChild(menuBtn);
 document.body.appendChild(selector);
 }
 })();
-
-
----
-
-
-## Újdonságok
-- Az egész bővítmény **Tábla** néven fut.
-- Minden fő e-Kréta oldalra, a **bejelentkezésre** és az **intézménykeresőre** is érvényes.
-- Előre definiált témák és **egyéni témák mentése, előhívása**

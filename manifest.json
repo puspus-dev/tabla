@@ -1,8 +1,8 @@
 {
 "manifest_version": 3,
 "name": "Tábla",
-"description": "e-Kréta bővítmény.",
-"version": "1.6.0",
+"description": "Testreszabható témák és szebb megjelenés az e-kréta.hu oldalain.",
+"version": "1.6.1",
 "icons": {
 "16": "icons/icon16.png",
 "48": "icons/icon48.png",
