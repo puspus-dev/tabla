@@ -59,4 +59,96 @@ transition: background 0.2s ease;
 
 .login-box button:hover, form button:hover {
 background: #2563eb;
+
+
+.kb-dark {
+  background: #121212 !important;
+  color: #eee !important;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.kb-dark a {
+  color: #80b3ff !important;
+}
+
+.kb-dark header,
+.kb-dark nav,
+.kb-dark footer,
+.kb-dark .card,
+.kb-dark .panel,
+.kb-dark .modal,
+.kb-dark table,
+.kb-dark .form-control {
+  background-color: #1e1e1e !important;
+  color: #eee !important;
+  border-color: #333 !important;
+}
+
+.kb-dark input,
+.kb-dark select,
+.kb-dark textarea {
+  background-color: #2a2a2a !important;
+  color: #eee !important;
+  border: 1px solid #444 !important;
+}
+
+.kb-dark button {
+  background-color: #333 !important;
+  color: #eee !important;
+  border: 1px solid #555 !important;
+}
+
+.kb-dark table tr:nth-child(even) {
+  background-color: #2a2a2a !important;
+}
+
+/* ====== Sötét/világos váltó gombok ====== */
+#kb-toggle, #kb-theme-menu {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffffffcc;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+#kb-theme-menu {
+  right: 120px;
+}
+
+#kb-theme-selector {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  flex-direction: column;
+  gap: 8px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+
+#kb-theme-selector button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #eee;
+}
+
+.kb-dark #kb-theme-selector {
+  background: #2a2a2a;
+}
+
+.kb-dark #kb-theme-selector button {
+  background: #444;
+  color: #fff;
 }

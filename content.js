@@ -1,4 +1,9 @@
 (function() {
+    const KEY = "tabla-dark-mode";
+const PREFS = "tabla-prefs";
+const CUSTOM_THEMES = "tabla-custom";
+
+
 if (localStorage.getItem(KEY) === '1') document.documentElement.classList.add('kb-dark');
 const prefs = JSON.parse(localStorage.getItem(PREFS) || '{}');
 applyPrefs(prefs);
